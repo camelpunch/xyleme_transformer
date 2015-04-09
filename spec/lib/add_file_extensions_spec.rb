@@ -1,4 +1,4 @@
-require_relative '../../lib/add_file_extentions'
+require_relative '../../lib/add_file_extensions'
 
 describe "adding file extensions" do
   it "appends the specified extensions to the end of the filenames" do
@@ -7,7 +7,7 @@ describe "adding file extensions" do
         "somefilename.html" => "somecontent"
     }
 
-    output = AddFileExtentions.new(['erb']).call(input)
+    output = AddFileExtensions.new(['erb']).call(input)
 
     output.keys.each do |file_paths|
       expect(file_paths).to match /.erb\z/

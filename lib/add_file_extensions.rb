@@ -1,4 +1,4 @@
-class AddFileExtentions
+class AddFileExtensions
   def initialize(file_extensions)
     @file_extensions = file_extensions
   end

@@ -1,6 +1,6 @@
 require_relative 'xslt_processor'
 require_relative 'replace_words_in_text'
-require_relative 'add_file_extentions'
+require_relative 'add_file_extensions'
 require_relative 'write_in_directory'
 require_relative 'add_frontmatter'
 require_relative 'helpers/filename_helpers'
@@ -30,7 +30,7 @@ class Converter
       processes = [
           XsltProcessor.new(File.read('xyleme_to_html.xsl')),
           ReplaceWordsInText.new('Hortonworks' => 'Pivotal'),
-          AddFileExtentions.new(%w[erb]),
+          AddFileExtensions.new(%w[erb]),
           AddFrontmatter.new('Pivotal Hadoop Documentation'),
       ]
 
